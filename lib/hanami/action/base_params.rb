@@ -79,6 +79,20 @@ module Hanami
         @params[key]
       end
 
+      # Returns the object associated with the given key or raises
+      # an exception if it doesn't exist
+      #
+      # @param key [Symbol] the key
+      #
+      # @return [Object,nil] return the associated object, if found
+      #
+      # @since 0.7.0
+      def fetch(key)
+        @params.fetch(key)
+      end
+
+
+      
       # Get an attribute value associated with the given key.
       # Nested attributes are reached by listing all the keys to get to the value.
       #
